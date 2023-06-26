@@ -121,31 +121,24 @@ ping $net
 ################################################################
 #############################CamHack##########################
 elif [ "$post" = "4" ]; then 
-cd .camhack
-cd CamPhish
 bash camphish.sh
 ###############################################################
 ################################ip tracer######################
 elif [ "$post" = "5" ]; then
-cd .ip
-cd track-ip
-./trackip
+bash trackip
 ###############################################################
 ############################Mask URl###########################
 elif [ "$post" = "6" ]; then 
-cd .mask
-cd maskphish
 bash maskphish.sh
 ###############################################################
 ###########################phishing############################
 elif [ "$post" = "7" ]; then
-cd .phisher
-cd nexphisher
-bash nexhisher
+bash nexhisher.sh
 ###############################################################
 ####################update#####################################
 elif [ "$post" = "8" ];then
-cd 
+cd
+rm -rf allinonehack 
 git clone https://github.com/gowtham006k/allinonehack
 ###############################################################
 #Kali OS ######################################################
@@ -157,7 +150,6 @@ read -r os
 if [ "$os" = "1" ]; then
 nh
 elif [ "$os" = "2" ]; then
-cd .kali
 clear
 bash install-nethunter-termux
 fi
