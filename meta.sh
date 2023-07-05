@@ -14,10 +14,11 @@ echo "(2) Nmap"
 echo "(3) Ping"
 echo "(4) CamHack"
 echo "(5) IP-Tracer"
-echo "(6) Mask URL"
-echo "(7) Phishing"
+echo "(6) NexPhishing"
+echo "(7) Mask URl"
 echo "(8) update"
 echo "(9) Kali In Termux"
+echo "(10) Black Phishing"
 echo "(0) Exit"
 ########################################################################
 echo "Enter The Option " ; read -r post   
@@ -128,12 +129,14 @@ elif [ "$post" = "5" ]; then
 bash trackip
 ###############################################################
 ############################Mask URl###########################
-elif [ "$post" = "6" ]; then 
+elif [ "$post" = "7" ]; then 
 bash maskphish.sh
 ###############################################################
 ###########################phishing############################
-elif [ "$post" = "7" ]; then
-bash nexhisher.sh
+elif [ "$post" = "6" ]; then
+chmod +x nexphisher
+bash setup 
+./nexphisher
 ###############################################################
 ####################update#####################################
 elif [ "$post" = "8" ];then
@@ -153,6 +156,10 @@ elif [ "$os" = "2" ]; then
 clear
 bash install-nethunter-termux
 fi
+#######################black####################################################
+elif [ "$post" = "10" ]; then 
+python3 phish.py
+###################################################################################
 ##################################################################################
 ############invali option#######################################################
 else 
