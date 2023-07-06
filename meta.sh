@@ -14,7 +14,7 @@ echo "(2) Nmap"
 echo "(3) Ping"
 echo "(4) CamHack"
 echo "(5) IP-Tracer"
-echo "(6) NexPhishing"
+echo "(6) zPhishing"
 echo "(7) Mask URl"
 echo "(8) update"
 echo "(9) Kali In Termux"
@@ -134,9 +134,9 @@ bash maskphish.sh
 ###############################################################
 ###########################phishing############################
 elif [ "$post" = "6" ]; then
-chmod +x nexphisher
-bash setup 
-./nexphisher
+pkg install tur-repo
+pkg install zphisher
+zphisher
 ###############################################################
 ####################update#####################################
 elif [ "$post" = "8" ];then
